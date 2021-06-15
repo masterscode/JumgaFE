@@ -8,7 +8,7 @@ const Header = () => {
   const menuAnchors = ["home", "shoes", "clothes", "accessories"];
   
   return (
-      <AppBar position='sticky' elevation={0} gutterBottom>
+      <AppBar position='sticky' elevation={0} >
         <Toolbar>
           <Grid container justify='space-around'>
             <Grid item>one </Grid>
