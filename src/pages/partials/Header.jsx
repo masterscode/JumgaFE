@@ -1,38 +1,22 @@
 import React from "react";
-import { Menu, Typography, Input } from "antd";
-import {
-  HeartOutlined,
-  UserOutlined,
-  ShoppingCartOutlined,
-  SearchOutlined,
-} from "@ant-design/icons";
+import {AppBar, Typography, Grid } from "@material-ui/core";
+import { Toolbar } from "@material-ui/core";
+
 
 const Header = () => {
-  const { Item } = Menu;
-  const { Text } = Typography;
-  const { Search } = Input;
-  const menuAnchors = ["home", "shoes", "clothes", "accessories"];
-  const icons = [
-    <SearchOutlined />,
-    <HeartOutlined />,
-    <UserOutlined />,
-    <ShoppingCartOutlined />,
-  ];
 
+  const menuAnchors = ["home", "shoes", "clothes", "accessories"];
+  
   return (
-    <Menu mode="horizontal">
-      {menuAnchors.map((anchor, index) => (
-        <Item>
-          <Text style={{ textTransform: "capitalize" }} >{anchor}</Text>
-        </Item>
-      ))}
-     
-     <SearchOutlined twoToneColor/>
-    <HeartOutlined />
-    <UserOutlined />
-    <ShoppingCartOutlined />
-      {/* <Search size='middle' placeholder="input search text" onSearch={()=>alert('')} enterButton /> */}
-    </Menu>
+      <AppBar position='sticky' elevation={0} gutterBottom>
+        <Toolbar>
+          <Grid container justify='space-around'>
+            <Grid item>one </Grid>
+            <Grid item>two</Grid>
+            <Grid item>three</Grid>
+          </Grid>
+        </Toolbar>
+      </AppBar>
   );
 };
 
