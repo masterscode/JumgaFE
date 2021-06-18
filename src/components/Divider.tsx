@@ -6,7 +6,7 @@ interface propType{text:string;}
 const Divider = ({text}:propType)=>{
     return (
         <div className="divider">
-            <span className='divider-text'>{text}</span>
+            <Typography variant='h3' align='center' className='divider-text'>{text}</Typography>
         </div>
     )
 }
