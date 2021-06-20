@@ -4,7 +4,7 @@ import CartItem from "../components/CartItem";
 
 
 const useStyles = makeStyles(()=>createStyles({
-    margin:{margin:'15px auto'},
+    margin:{margin:'15px auto', padding:'15px'},
     makeBorder:{border:'solid thin lightgray'}
 }));
 
@@ -16,7 +16,7 @@ const Cart = ()=>{
             <Container className={css.margin}>
                 <Typography variant='h4'>Shopping Cart  <Chip label={ cartItem.length }/> </Typography>
             </Container>
-            <Container className={`${css.margin} ${css.makeBorder}`}>                
+            <Container className={`${css.margin} ${css.makeBorder}`}>
                 <CartItem />
             </Container>
         </React.Fragment>

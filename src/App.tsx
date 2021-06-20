@@ -5,14 +5,15 @@ import Footer from "./pages/partials/Footer";
 import Home from "./pages/Home";
 import "./pages/css-in-js/style.css"
 import Cart from "./pages/Cart";
+import CheckOut from "./pages/CheckOut";
 
 const App = () => {
   return (
     <>
       <Header />
-      {/* <Auth /> */}
+       <Auth />
       {/* <Home /> */}
-      <Cart/>
+      {/*  <CheckOut/>*/}
       <Footer />
     </>
   );

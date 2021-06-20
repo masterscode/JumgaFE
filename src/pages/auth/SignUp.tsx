@@ -2,16 +2,14 @@ import React from "react";
 import {
   TextField,
   Button,
-  FormControlLabel,
   Grid,
   Typography,
-  Checkbox,
 } from "@material-ui/core";
 import ExitToAppTwoToneIcon from "@material-ui/icons/ExitToAppTwoTone";
 
 const SignUp = () => {
   return (
-    <Grid item xs={12} md={4}>
+    <Grid item xs={12} md={5}>
         <Typography variant='h5' gutterBottom>CREATE ACCOUNT</Typography>
       <form noValidate autoComplete="off">
       <Typography variant="body2"> First Name </Typography>
@@ -65,10 +63,7 @@ const SignUp = () => {
         >
           create account
         </Button>
-        <FormControlLabel
-          label="I want to receive Jumga newsletters with the best deals and offers"
-          control={<Checkbox color="primary" />}
-        />
+
       </form>
       <Typography>forgot Password?</Typography>
     </Grid>

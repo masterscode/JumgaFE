@@ -1,6 +1,6 @@
 import React from "react";
-import {Grid, Avatar, Typography, makeStyles, createStyles, ButtonGroup, Button} from '@material-ui/core';
-import {FavoriteBorderOutlined, RemoveCircle} from '@material-ui/icons';
+import {Grid, Avatar, Typography, makeStyles, createStyles, Button} from '@material-ui/core';
+import { RemoveCircle} from '@material-ui/icons';
 
 
 const useStyles = makeStyles(()=>createStyles({
@@ -10,9 +10,9 @@ const useStyles = makeStyles(()=>createStyles({
 
 const CartProduct = ()=>{
     const css = useStyles();
-    return <Grid container>
-        <Grid item md={2}>
-            <Avatar variant='square' src='logo512.png' sizes='' />
+    return <Grid container alignItems='center'>
+        <Grid item md={2} >
+            <Avatar variant='square' src='logo512.png' sizes='small' />
         </Grid>
         <Grid item md={10}>
             <Grid container>
@@ -21,10 +21,7 @@ const CartProduct = ()=>{
                     <Typography variant='caption' color='textSecondary'>Size - EU 36</Typography>
                 </Grid>
                 <Grid item xs={12}>
-                    <ButtonGroup size='small' fullWidth variant='text'>
-                        <Button startIcon={<FavoriteBorderOutlined/>} color='primary'>MOVE TO FAVORITES</Button>
                         <Button startIcon={<RemoveCircle/>} color='primary'>REMOVE</Button>
-                    </ButtonGroup>
                 </Grid>
             </Grid>
 

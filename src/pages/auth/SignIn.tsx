@@ -13,7 +13,7 @@ import LockOpenTwoToneIcon from "@material-ui/icons/LockOpenTwoTone";
 const SignIn = () => {
 
   return (
-    <Grid item xs={12} md={4}>
+    <Grid item xs={12} md={5}>
         <Typography variant='h5' gutterBottom>SIGN IN</Typography>
       <form noValidate autoComplete="off">
 
