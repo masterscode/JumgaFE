@@ -1,7 +1,8 @@
 import React from "react";
 import {Button, Grid, TextField, Typography,} from "@material-ui/core";
 import ExitToAppTwoToneIcon from "@material-ui/icons/ExitToAppTwoTone";
-import {doRegister, validateField} from "../../core/validation";
+import { validateField} from "../../core/validation";
+import {doRegister} from '../../core/auth/auth';
 import {InputField, RegistrationFields, RegistrationFieldsError} from '../../core/Types';
 
 
@@ -15,13 +16,13 @@ const SignUp = () => {
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         let {name, value}: InputField = event.currentTarget;
         setError(errorFields=>({
+                ...errorFields,
                 [name]: validateField({name, value}),
-                ...errorFields
             }));
 
         setInputField(oldState => ({
+                ...oldState,
                 [name]: value,
-                ...oldState
             }));
 
     }

@@ -1,7 +1,8 @@
 // @ts-ignore
 import Joi from 'joi-browser';
-import {InputField, RegistrationFields} from './Types';
-import React from "react";
+import {InputField} from './Types';
+
+
 
 export const validationSchema = {
     email:Joi.string().email().required().label('Email'),
@@ -17,12 +18,4 @@ export const validateField = ({name, value}: InputField) => {
     const schema = {[name]: validationSchema[name as keyof typeof validationSchema]};
     const {error} = Joi.validate(field, schema);
     return !error;
-}
-
-export const doLogin = (event:React.FormEvent) => {
-    //
-}
-
-export const doRegister = (event:React.FormEvent, fields:RegistrationFields)=>{
-    //
 }
