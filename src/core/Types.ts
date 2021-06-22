@@ -16,3 +16,7 @@ export interface RegistrationFieldsError {
     email: undefined | boolean;
     password: undefined | boolean;
 }
+
+export interface LoginFields{
+    email:string; password:string;
+}
